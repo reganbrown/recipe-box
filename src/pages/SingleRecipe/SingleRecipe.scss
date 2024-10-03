@@ -1,0 +1,67 @@
+/* SingleRecipe.scss */
+.recipe {
+  background-color: pink;
+  height: 100vh;
+  display: flex;
+}
+.recipe-container {
+  padding: 20px;
+  background-color: white; /* Background color */
+  color: black; /* Text color */
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 800px; /* Limit the width of the container */
+  margin: auto; /* Center the container */
+}
+
+.recipe__heading {
+  color: rgb(138, 11, 89); /* Heading color */
+  font-size: 2.5rem; /* Font size for the recipe name */
+  margin-bottom: 10px;
+}
+
+.recipe__subheading {
+  color: #ff1f8f; /* Subheading color */
+  font-size: 1.8rem; /* Font size for the section headings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ingredient__list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.ingredient__item {
+  background-color: rgba(
+    255,
+    182,
+    193,
+    0.5
+  ); /* Light pink background for list items */
+  color: black; /* Text color for list items */
+  padding: 8px; /* Padding for list items */
+  margin-bottom: 5px; /* Spacing between list items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.recipe__instruction {
+  background-color: rgba(
+    255,
+    255,
+    224,
+    0.8
+  ); /* Light yellow background for instructions */
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.return-home {
+  display: flex;
+  justify-content: center;
+  background-color: pink;
+  border-radius: 8px;
+  height: 2rem;
+  align-items: center;
+}

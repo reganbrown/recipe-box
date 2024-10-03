@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./CreateRecipe.scss";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function CreateRecipe() {
   const [numberOfIngredients, setNumberOfIngredients] = useState(1);
@@ -47,17 +48,17 @@ export default function CreateRecipe() {
   }
 
   return (
-    <>
+    <div className="page">
       <h1 className="form-header"> Create A New Recipe </h1>
       <form onSubmit={submitRecipe} className="recipe-form">
-        <label>Name of Recipe:</label>
+        <label className="label">Name of Recipe:</label>
         <input
           type="text"
           placeholder="Name your recipe"
           className="form__input"
           name="recipeName"
         ></input>
-        <label>Number of Ingredients:</label>
+        <label className="label">Number of Ingredients:</label>
         <input
           type="number"
           placeholder="Number of ingredients"
@@ -69,16 +70,19 @@ export default function CreateRecipe() {
         {Array.from({ length: numberOfIngredients }).map((_, index) => (
           <Ingredient key={index} update={updateIngredientList} id={index} />
         ))}
-        <label>Recipe Instructions:</label>
+        <label className="label">Recipe Instructions:</label>
         <textarea
           placeholder="Add recipe instructions"
           name="recipeInstructions"
           className="form__input instructions"
         ></textarea>
 
-        <button>Build Recipe</button>
+        <button className="submitButton">Build Recipe</button>
         <ToastContainer />
+        <Link to="/" className="cancel__link">
+          <div className="cancel">Cancel</div>
+        </Link>
       </form>
-    </>
+    </div>
   );
 }

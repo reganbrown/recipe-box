@@ -1,18 +1,59 @@
+.page {
+  background-color: pink;
+  height: 100vh;
+}
+
 .recipe-form {
   display: flex;
   flex-direction: column;
-  padding: 10px 50px;
+  padding: 40px 50px;
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  border-radius: 8px;
 }
 
 .form__input {
   margin-bottom: 10px;
+  height: 1.5rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid pink;
+  background-color: rgba(255, 255, 224, 0.8);
 }
 
 .form-header {
   text-align: center;
+  color: rgb(138, 11, 89); /* Heading color */
+  font-size: 2.5rem; /* Font size for the recipe name */
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 4rem;
 }
 
 .instructions {
   resize: none;
   height: 60px;
+}
+
+.cancel {
+  text-align: center;
+  color: #ff1f8f;
+  font-size: 1.5rem;
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.submitButton {
+  background-color: pink;
+  border: none;
+  height: 3rem;
+  border-radius: 4px;
+  color: rgb(138, 11, 89);
+  margin: 1rem 0;
+}
+
+.label {
+  color: rgb(138, 11, 89);
 }
