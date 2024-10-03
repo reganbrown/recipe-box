@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import "./OpenRecipe.scss";
 import axios from "axios";
 
 const OpenRecipe = () => {
-
-    const [recipes, setRecipes] = useState([])
+    const [recipes, setRecipes] = useState([]);
 
     const getRecipes = async () => {
         const apiUrl = "http://localhost:8080/recipes"; 
@@ -17,22 +17,24 @@ const OpenRecipe = () => {
         }
     };
 
-      useEffect(() => {
+    useEffect(() => {
         getRecipes();
-      }, [])
+    }, []);
 
     return (
         <>
             <h1>Recipes</h1>
             <div className='recipes__list'>
                 {recipes.map((recipe) => (
-                <div key={recipe.id}>
-                <p>{recipe.name}</p>
-                </div>
+                    <div key={recipe.id}>
+                        <Link to={`/recipes/${recipe.id}`}>
+                            <p>{recipe.name}</p>
+                        </Link>
+                    </div>
                 ))}
             </div>
         </>
     );
-  };
-  
-  export default OpenRecipe;
+};
+
+export default OpenRecipe;
