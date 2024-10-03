@@ -1,0 +1,17 @@
+.ingredient-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__left {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.wrapper__right {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
