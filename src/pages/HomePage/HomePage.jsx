@@ -5,8 +5,8 @@ const HomePage = () => {
     return (
         <>
             <div className="container">
-                <Link className="links" to="/OpenReceipe">
-                    <HalfPage className="left" text="Open a Receipe" />
+                <Link className="links" to="/recipes">
+                    <HalfPage className="left" text="Open a Recipe" />
                 </Link>
                 <Link className="links" to="/CreateReceipe">
                     <HalfPage className="right" text="Create a Receipe" />
