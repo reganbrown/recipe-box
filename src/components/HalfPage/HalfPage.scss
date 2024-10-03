@@ -1,0 +1,28 @@
+.side-left,
+.side-right {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.side-left {
+    background-color: pink;
+}
+
+.side-right {
+    background-color: yellow;
+}
+
+.text{
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size:90px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: white;
+    text-shadow: 
+      2px 2px #ff1f8f, 
+      4px 4px #000000; 
+  }
