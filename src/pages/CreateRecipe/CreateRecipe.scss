@@ -1,0 +1,18 @@
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+}
+
+.form__input {
+  margin-bottom: 10px;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.instructions {
+  resize: none;
+  height: 60px;
+}
