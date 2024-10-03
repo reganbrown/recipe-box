@@ -1,0 +1,11 @@
+.hero {
+    width: 100%; /* Full width */
+    height: 60vh; /* Half the viewport height */
+    overflow: hidden; /* Ensure no overflow */
+    &__image {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        object-fit: cover; /* Ensure it covers the area */
+        display: block; /* Remove bottom space */
+    }
+}
