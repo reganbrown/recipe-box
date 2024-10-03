@@ -1,16 +1,21 @@
 import Ingredient from "../../components/Ingredient/Ingredient";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./CreateRecipe.scss";
-
-async function postRecipe(recipe) {
-  let results = await axios.post("http://localhost:8080/recipes", recipe);
-  console.log(results);
-}
+import { useNavigate } from "react-router-dom";
 
 export default function CreateRecipe() {
   const [numberOfIngredients, setNumberOfIngredients] = useState(1);
   const [ingredientList, setIngredientList] = useState([]);
+
+  async function postRecipe(recipe) {
+    let results = await axios.post("http://localhost:8080/recipes", recipe);
+    console.log(results);
+  }
+
+  let nav = useNavigate();
 
   function handleInputChange(event) {
     setNumberOfIngredients(parseInt(event.target.value) || 0);
@@ -36,7 +41,11 @@ export default function CreateRecipe() {
     };
     console.log(recipe);
     postRecipe(recipe);
+    toast.success("Submitted!", {
+      onClose: () => nav("/"),
+    });
   }
+
   return (
     <>
       <h1 className="form-header"> Create A New Recipe </h1>
@@ -68,6 +77,7 @@ export default function CreateRecipe() {
         ></textarea>
 
         <button>Build Recipe</button>
+        <ToastContainer />
       </form>
     </>
   );
