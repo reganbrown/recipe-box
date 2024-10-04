@@ -22,7 +22,7 @@ const OpenRecipe = () => {
   }, []);
 
   return (
-    <>
+    <div className="wrapper">
       <div className="recipes-list-container">
         <h1 className="recipes-title">Recipes</h1>
         <div className="recipes__list">
@@ -38,7 +38,7 @@ const OpenRecipe = () => {
       <Link className="links" to="/CreateRecipe">
         <div className="new-recipe">+</div>
       </Link>
-    </>
+    </div>
   );
 };
 
